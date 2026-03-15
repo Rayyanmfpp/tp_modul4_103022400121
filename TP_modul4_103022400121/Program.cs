@@ -35,5 +35,28 @@
             }
         }
     }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            KodePos kp = new KodePos();
+            string[] contohKelurahan = { "Batununggal", "Wates", "AsalSebut" };
+
+            Console.WriteLine("--- Testing Table-Driven ---");
+            foreach (var kel in contohKelurahan)
+            {
+                Console.WriteLine($"Input: {kel} | Output: {kp.getKodePos(kel)}");
+            }
+
+            Console.WriteLine("\n--- Testing State-Based ---");
+            DoorMachine pintu = new DoorMachine();
+            pintu.PerubahanState("BukaPintu");  
+            pintu.PerubahanState("KunciPintu"); 
+
+            Console.WriteLine("class main d atas saya pakai hanya untuk testing logika dari kedua class");
+        }
+    }
 }
 
